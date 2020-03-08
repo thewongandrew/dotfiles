@@ -7,7 +7,11 @@ Plug 'drewtempelmeyer/palenight.vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
+" turn hybrid line numbers on
+:set number relativenumber
+:set nu rnu
+
 syntax enable
 set background=dark
-colorscheme palenight
 set termguicolors
+colorscheme palenight
