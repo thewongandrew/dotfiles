@@ -1,17 +1,32 @@
-" Plugins will be downloaded under the specified directory.
-call plug#begin('~/.vim/plugged')
+set number relativenumber
+set nu rnu
 
-" Declare the list of plugins.
-Plug 'drewtempelmeyer/palenight.vim'
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
 
-" List ends here. Plugins become visible to Vim after this call.
-call plug#end()
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2
 
-" turn hybrid line numbers on
-:set number relativenumber
-:set nu rnu
+set colorcolumn=+1
+highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+set encoding=utf-8
+
+" Split window
+nmap ss :split<Return><C-w>w
+nmap sv :vsplit<Return><C-w>w
+
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 syntax enable
-set background=dark
-set termguicolors
-colorscheme palenight
