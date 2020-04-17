@@ -1,3 +1,6 @@
+syntax enable
+colorscheme iceberg
+
 " Set statusline config
 set laststatus=2            " Always show statusline
 set statusline=%f           " Path to file
@@ -36,8 +39,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
-syntax enable
 
 " Better commit messages
 au Filetype gitcommit 
